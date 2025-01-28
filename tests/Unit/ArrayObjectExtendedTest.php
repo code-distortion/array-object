@@ -5,6 +5,8 @@ namespace CodeDistortion\ArrayObjectExtended\Tests\Unit;
 use CodeDistortion\ArrayObjectExtended\Tests\PHPUnitTestCase;
 use CodeDistortion\ArrayObjectExtended\Tests\Support\TestArrayObjectExtended;
 use Exception;
+use PHPUnit\Framework\Attributes\DataProvider;
+use PHPUnit\Framework\Attributes\Test;
 use Throwable;
 use ValueError;
 
@@ -22,6 +24,7 @@ class ArrayObjectExtendedTest extends PHPUnitTestCase
      *
      * @return void
      */
+    #[Test]
     public static function test_append_method(): void
     {
         $a = new TestArrayObjectExtended([]);
@@ -57,6 +60,7 @@ class ArrayObjectExtendedTest extends PHPUnitTestCase
      *
      * @return void
      */
+    #[Test]
     public static function test_arsort_method(): void
     {
         $a = new TestArrayObjectExtended([10 => 'ten', 11 => 'eleven', 12 => 'twelve']);
@@ -87,6 +91,7 @@ class ArrayObjectExtendedTest extends PHPUnitTestCase
      *
      * @return void
      */
+    #[Test]
     public static function test_asort_method(): void
     {
         $a = new TestArrayObjectExtended([10 => 'ten', 11 => 'eleven', 12 => 'twelve']);
@@ -117,6 +122,7 @@ class ArrayObjectExtendedTest extends PHPUnitTestCase
      *
      * @return void
      */
+    #[Test]
     public static function test_change_key_case_method(): void
     {
         $start = ['oNe' => 1, 'TwO' => 2];
@@ -142,6 +148,7 @@ class ArrayObjectExtendedTest extends PHPUnitTestCase
      *
      * @return void
      */
+    #[Test]
     public static function test_chunk_method(): void
     {
         $start = [50 => 100, 51 => 101, 52 => 102, 53 => 103];
@@ -194,6 +201,7 @@ class ArrayObjectExtendedTest extends PHPUnitTestCase
      *
      * @return void
      */
+    #[Test]
     public static function test_column_method(): void
     {
         $data = [
@@ -311,6 +319,7 @@ class ArrayObjectExtendedTest extends PHPUnitTestCase
      *
      * @return void
      */
+    #[Test]
     public static function test_contains_method(): void
     {
         $a = new TestArrayObjectExtended([10 => 'ten', 11 => 'eleven', 12 => 'twelve', 'false' => false]);
@@ -343,6 +352,7 @@ class ArrayObjectExtendedTest extends PHPUnitTestCase
      *
      * @return void
      */
+    #[Test]
     public static function test_exchange_array_method(): void
     {
         $origArray = [10 => 'ten', 11 => 'eleven'];
@@ -361,6 +371,7 @@ class ArrayObjectExtendedTest extends PHPUnitTestCase
      *
      * @return void
      */
+    #[Test]
     public static function test_filter_method(): void
     {
         $a = new TestArrayObjectExtended([10 => 'ten', 11 => 'eleven']);
@@ -387,6 +398,7 @@ class ArrayObjectExtendedTest extends PHPUnitTestCase
      *
      * @return void
      */
+    #[Test]
     public static function test_flip_method(): void
     {
         $a = new TestArrayObjectExtended([]);
@@ -406,6 +418,7 @@ class ArrayObjectExtendedTest extends PHPUnitTestCase
      *
      * @return void
      */
+    #[Test]
     public static function test_in_array_method(): void
     {
         $a = new TestArrayObjectExtended([10 => 'ten', 11 => 'eleven', 12 => 'twelve', 'false' => false]);
@@ -438,6 +451,7 @@ class ArrayObjectExtendedTest extends PHPUnitTestCase
      *
      * @return void
      */
+    #[Test]
     public static function test_is_list_method(): void
     {
         $a = new TestArrayObjectExtended([10 => 'ten', 11 => 'eleven']);
@@ -471,6 +485,7 @@ class ArrayObjectExtendedTest extends PHPUnitTestCase
      *
      * @return void
      */
+    #[Test]
     public static function test_key_exists_method(): void
     {
         $a = new TestArrayObjectExtended([10 => 'ten', 11 => 'eleven']);
@@ -488,6 +503,7 @@ class ArrayObjectExtendedTest extends PHPUnitTestCase
      *
      * @return void
      */
+    #[Test]
     public static function test_key_first_method(): void
     {
         $a = new TestArrayObjectExtended([10 => 'ten', 11 => 'eleven']);
@@ -507,6 +523,7 @@ class ArrayObjectExtendedTest extends PHPUnitTestCase
      *
      * @return void
      */
+    #[Test]
     public static function test_key_last_method(): void
     {
         $a = new TestArrayObjectExtended([10 => 'ten', 11 => 'eleven']);
@@ -526,6 +543,7 @@ class ArrayObjectExtendedTest extends PHPUnitTestCase
      *
      * @return void
      */
+    #[Test]
     public static function test_keys_method(): void
     {
         $a = new TestArrayObjectExtended([10 => 'ten', 11 => 'eleven', 'false' => 0]);
@@ -545,6 +563,7 @@ class ArrayObjectExtendedTest extends PHPUnitTestCase
      *
      * @return void
      */
+    #[Test]
     public static function test_krsort_method(): void
     {
         $a = new TestArrayObjectExtended([10 => 'ten', 11 => 'eleven', 12 => 'twelve']);
@@ -575,6 +594,7 @@ class ArrayObjectExtendedTest extends PHPUnitTestCase
      *
      * @return void
      */
+    #[Test]
     public static function test_ksort_method(): void
     {
         $a = new TestArrayObjectExtended([10 => 'ten', 11 => 'eleven', 12 => 'twelve']);
@@ -605,6 +625,7 @@ class ArrayObjectExtendedTest extends PHPUnitTestCase
      *
      * @return void
      */
+    #[Test]
     public static function test_map_method(): void
     {
         $a = new TestArrayObjectExtended([]);
@@ -623,8 +644,11 @@ class ArrayObjectExtendedTest extends PHPUnitTestCase
     /**
      * Test the max(..) method.
      *
+     * @test
+     *
      * @return void
      */
+    #[Test]
     public function test_max_method(): void
     {
         $caughtException = false;
@@ -647,8 +671,11 @@ class ArrayObjectExtendedTest extends PHPUnitTestCase
     /**
      * Test the min(..) method.
      *
+     * @test
+     *
      * @return void
      */
+    #[Test]
     public function test_min_method(): void
     {
         $caughtException = false;
@@ -675,6 +702,7 @@ class ArrayObjectExtendedTest extends PHPUnitTestCase
      *
      * @return void
      */
+    #[Test]
     public static function test_natcasesort_method(): void
     {
         $a = new TestArrayObjectExtended([1 => 'file 1', 11 => 'FILE 11', 2 => 'file 2', 10 => 'file 10']);
@@ -701,6 +729,7 @@ class ArrayObjectExtendedTest extends PHPUnitTestCase
      *
      * @return void
      */
+    #[Test]
     public static function test_natsort_method(): void
     {
         $a = new TestArrayObjectExtended([1 => 'file 1', 11 => 'FILE 11', 2 => 'file 2', 10 => 'file 10']);
@@ -727,6 +756,7 @@ class ArrayObjectExtendedTest extends PHPUnitTestCase
      *
      * @return void
      */
+    #[Test]
     public static function test_offset_set_method(): void
     {
         $a = new TestArrayObjectExtended([]);
@@ -777,6 +807,7 @@ class ArrayObjectExtendedTest extends PHPUnitTestCase
      *
      * @return void
      */
+    #[Test]
     public static function test_offset_unset_method(): void
     {
         $a = new TestArrayObjectExtended([10 => 'ten', 11 => 'eleven']);
@@ -826,6 +857,7 @@ class ArrayObjectExtendedTest extends PHPUnitTestCase
      *
      * @return void
      */
+    #[Test]
     public static function test_pop_method(): void
     {
         // from an empty array
@@ -857,6 +889,7 @@ class ArrayObjectExtendedTest extends PHPUnitTestCase
      *
      * @return void
      */
+    #[Test]
     public static function test_push_method(): void
     {
         // from an empty array
@@ -895,6 +928,7 @@ class ArrayObjectExtendedTest extends PHPUnitTestCase
      *
      * @return void
      */
+    #[Test]
     public static function test_rand_method(): void
     {
 //        // from an empty array - pick 1
@@ -944,6 +978,7 @@ class ArrayObjectExtendedTest extends PHPUnitTestCase
      *
      * @return void
      */
+    #[Test]
     public static function test_reverse_method(): void
     {
         // preserve keys
@@ -987,6 +1022,7 @@ class ArrayObjectExtendedTest extends PHPUnitTestCase
      *
      * @return void
      */
+    #[Test]
     public static function test_rnatcasesort_method(): void
     {
         $a = new TestArrayObjectExtended([1 => 'file 1', 11 => 'FILE 11', 2 => 'file 2', 10 => 'file 10']);
@@ -1013,6 +1049,7 @@ class ArrayObjectExtendedTest extends PHPUnitTestCase
      *
      * @return void
      */
+    #[Test]
     public static function test_rnatsort_method(): void
     {
         $a = new TestArrayObjectExtended([1 => 'file 1', 11 => 'FILE 11', 2 => 'file 2', 10 => 'file 10']);
@@ -1039,6 +1076,7 @@ class ArrayObjectExtendedTest extends PHPUnitTestCase
      *
      * @return void
      */
+    #[Test]
     public static function test_rsort_method(): void
     {
         $a = new TestArrayObjectExtended([10 => 'ten', 11 => 'eleven', 12 => 'twelve']);
@@ -1069,6 +1107,7 @@ class ArrayObjectExtendedTest extends PHPUnitTestCase
      *
      * @return void
      */
+    #[Test]
     public static function test_search_method(): void
     {
         // from an empty array
@@ -1099,6 +1138,7 @@ class ArrayObjectExtendedTest extends PHPUnitTestCase
      *
      * @return void
      */
+    #[Test]
     public static function test_shift_method(): void
     {
         // from an empty array
@@ -1131,6 +1171,7 @@ class ArrayObjectExtendedTest extends PHPUnitTestCase
      *
      * @return void
      */
+    #[Test]
     public static function test_shuffle_method(): void
     {
         $size = 1000;
@@ -1158,6 +1199,7 @@ class ArrayObjectExtendedTest extends PHPUnitTestCase
      *
      * @return void
      */
+    #[Test]
     public static function test_slice_method(): void
     {
         // from an empty array
@@ -1288,6 +1330,7 @@ class ArrayObjectExtendedTest extends PHPUnitTestCase
      *
      * @return void
      */
+    #[Test]
     public static function test_sort_method(): void
     {
         $a = new TestArrayObjectExtended([10 => 'ten', 11 => 'eleven', 12 => 'twelve']);
@@ -1318,6 +1361,7 @@ class ArrayObjectExtendedTest extends PHPUnitTestCase
      *
      * @return void
      */
+    #[Test]
     public static function test_uasort_method(): void
     {
         $callback = fn($a, $b) => $a > $b ? 1 : -1;
@@ -1340,6 +1384,7 @@ class ArrayObjectExtendedTest extends PHPUnitTestCase
      *
      * @return void
      */
+    #[Test]
     public static function test_uksort_method(): void
     {
         $callback = fn($a, $b) => $a > $b ? 1 : -1;
@@ -1362,6 +1407,7 @@ class ArrayObjectExtendedTest extends PHPUnitTestCase
      *
      * @return void
      */
+    #[Test]
     public static function test_unique_method(): void
     {
         // from an empty array
@@ -1396,6 +1442,7 @@ class ArrayObjectExtendedTest extends PHPUnitTestCase
      *
      * @return void
      */
+    #[Test]
     public static function test_serialization_methods(): void
     {
         $a = new TestArrayObjectExtended([10 => 'ten', 11 => 'eleven']);
@@ -1415,6 +1462,7 @@ class ArrayObjectExtendedTest extends PHPUnitTestCase
      *
      * @return void
      */
+    #[Test]
     public static function test_unshift_method(): void
     {
         // from an empty array
@@ -1453,6 +1501,7 @@ class ArrayObjectExtendedTest extends PHPUnitTestCase
      *
      * @return void
      */
+    #[Test]
     public static function test_usort_method(): void
     {
         $callback = fn($a, $b) => $a > $b ? 1 : -1;
@@ -1475,6 +1524,7 @@ class ArrayObjectExtendedTest extends PHPUnitTestCase
      *
      * @return void
      */
+    #[Test]
     public static function test_values_method(): void
     {
         $a = new TestArrayObjectExtended([10 => 'ten', 11 => 'eleven', 12 => 'twelve']);
@@ -1495,6 +1545,7 @@ class ArrayObjectExtendedTest extends PHPUnitTestCase
      *
      * @return void
      */
+    #[Test]
     public static function test_array_iterator_methods(): void
     {
         $origArray = [100 => 'a', 101 => 'b', 102 => 'c'];
@@ -1588,15 +1639,17 @@ class ArrayObjectExtendedTest extends PHPUnitTestCase
      * @test
      * @dataProvider resetArrayPointerMethodsDataProvider
      *
-     * @param string                $method   The method to test.
-     * @param string                $function PHP's equivalent function.
-     * @param array<integer, mixed> $args     The arguments to pass to the method.
-     * @param boolean               $reset    Whether the current index should be reset.
+     * @param string                $mthd  The method to test.
+     * @param string                $fn    PHP's equivalent function.
+     * @param array<integer, mixed> $args  The arguments to pass to the method.
+     * @param boolean               $reset Whether the current index should be reset.
      * @return void
      */
+    #[Test]
+    #[DataProvider('resetArrayPointerMethodsDataProvider')]
     public static function test_methods_that_reset_the_array_pointer(
-        string $method,
-        string $function,
+        string $mthd,
+        string $fn,
         array $args,
         bool $reset
     ): void {
@@ -1609,9 +1662,9 @@ class ArrayObjectExtendedTest extends PHPUnitTestCase
         $array = $origArray;
         end($array);
         $keyBefore = key($array);
-        /** @var callable $function */
+        /** @var callable $fn */
 //var_dump($array); // before
-        call_user_func_array($function, array_merge([&$array], $args));
+        call_user_func_array($fn, array_merge([&$array], $args));
         $keyAfter = key($array);
 //var_dump($array); // after
 //print "$keyBefore $keyAfter\n"; // keys
@@ -1627,7 +1680,7 @@ class ArrayObjectExtendedTest extends PHPUnitTestCase
 //var_dump($arrayObject); // before
         $keyBefore = $arrayObject->key();
         /** @var callable $callable */
-        $callable = [$arrayObject, $method];
+        $callable = [$arrayObject, $mthd];
         call_user_func_array($callable, array_merge($args));
         $keyAfter = $arrayObject->key();
 //var_dump($arrayObject); // after
@@ -1752,6 +1805,8 @@ class ArrayObjectExtendedTest extends PHPUnitTestCase
      * @return void
      * @throws Exception Thrown if the $method can't be called.
      */
+    #[Test]
+    #[DataProvider('methodContentChangeDataProvider')]
     public static function test_which_methods_change_the_contents(
         string $method,
         array $args,

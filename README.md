@@ -1,7 +1,7 @@
 # ArrayObjectExtended
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/code-distortion/array-object-extended.svg?style=flat-square)](https://packagist.org/packages/code-distortion/array-object-extended)
-![PHP Version](https://img.shields.io/badge/PHP-8.2%20to%208.3-blue?style=flat-square)
+![PHP Version](https://img.shields.io/badge/PHP-8.2%20to%208.4-blue?style=flat-square)
 [![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/code-distortion/array-object-extended/run-tests.yml?branch=main&style=flat-square)](https://github.com/code-distortion/array-object-extended/actions)
 [![Buy The World a Tree](https://img.shields.io/badge/treeware-%F0%9F%8C%B3-lightgreen?style=flat-square)](https://plant.treeware.earth/code-distortion/array-object-extended)
 [![Contributor Covenant](https://img.shields.io/badge/contributor%20covenant-v2.1%20adopted-ff69b4.svg?style=flat-square)](.github/CODE_OF_CONDUCT.md)
